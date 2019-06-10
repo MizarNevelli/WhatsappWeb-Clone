@@ -6,7 +6,7 @@ Boolzapp has been the second full project after 2 month od coding at Boolean Car
 
 HTML + CSS + + javascript + jQuery + AJAX + Handlebars
 
-## functions
+## Functionalities
 
 - User search
 - Change chat views
@@ -15,4 +15,5 @@ HTML + CSS + + javascript + jQuery + AJAX + Handlebars
 - Live message timing + updated chat time
 
 ## Preview
+<img width="1521" alt="Schermata 2019-06-10 alle 19 58 54" src="https://user-images.githubusercontent.com/46935430/59215735-45a30400-8bba-11e9-9af8-d15fa248e939.png">
 
