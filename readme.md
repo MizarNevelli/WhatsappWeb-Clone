@@ -1,6 +1,6 @@
 # WhatsApp Web copy
 
-Boolzapp has been the second full project after 2 month od coding at Boolean Careers
+Boolzapp has been the second full responsive project after 2 month of coding at Boolean Careers
 
 ## Technologies
 
