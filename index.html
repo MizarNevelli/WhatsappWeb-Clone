@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- HTML / CSS style -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <title>BoolzApp</title>
+    <!-- JS / jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
+    <!-- Handlebars message template -->
+
+    <!-- message SENT handlebars script -->
+    <script id="message-sent-template" type="text/x-handlebars-template">
+      <div class="message sent">
+        <!-- {{ messageSent }}<small>{{ time }}</small> -->
+        <p><span>{{ messageSent }}<small>{{ time }}</small></span></p>
+        <div class="myDropdown hidden">
+          <button type="button">Message Info</button>
+          <button type="button">Reply</button>
+          <button type="button">Forward message</button>
+          <button type="button">Star message</button>
+          <button class="myDelete" type="button">Delete message</button>
+        </div>
+      </div>
+      </script>
+
+      <!-- message rece ived handlebars script -->
+      <script id="message-received-template" type="text/x-handlebars-template">
+      <div class="message received">
+        <!-- {{ messageReceived }}<small>{{ time }}</small> -->
+        <p><span>{{ messageReceived }}<small>{{ time }}</small></span></p>
+        <div class="myDropdown hidden">
+          <button type="button">Message Info</button>
+          <button type="button">Reply</button>
+          <button type="button">Forward message</button>
+          <button type="button">Star message</button>
+          <button class="myDelete" type="button">Delete message</button>
+        </div>
+      </div>
+      </script>
+
+      <!-- my js -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- background layout -->
+    <div class="background">
+      <div class="top-bg"></div>
+      <div class="bottom-bg"></div>
+    </div>
+    <!-- container layout -->
+    <div class="d-flex myContainer">
+      <!-- LEFT container layout -->
+      <div class="d-flex left-container">
+        <!-- LEFT header  -->
+        <div class="d-flex myHeader">
+          <div class="usr-img"></div> <!-- img used as background-image -->
+          <div class="d-flex usr-icon">
+            <i class="far fa-circle"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <!-- LEFT notification -->
+        <div class="d-flex notification">
+          <div class="d-flex notification-icon">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+          <div class="notification-text">
+            <p><strong>Get notified of new messages </strong></p>
+            <p>Turn on desktop notifications</p>
+          </div>
+        </div>
+        <!-- LEFT search -->
+        <div class="d-flex search"> <!-- accrocchio con border CSS -->
+          <div class="d-flex search-icon">
+            <i class="fas fa-search fa-xs"></i>
+          </div>
+          <input type="text" placeholder="Search or start new chat">
+        </div>
+        <!-- LEFT all chat -->
+        <div class="allChat">
+          <!-- chat zero -->
+          <div class="chat one selected">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Satoshi Nakamoto</h6>
+              <span><i class="fas fa-check-double fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>12:25</span>
+            </div>
+          </div>
+          <!-- chat one -->
+          <div class="chat two">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Fabio</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>04:38</span>
+              <i class="fas fa-volume-mute"></i>
+            </div>
+          </div>
+          <!-- chat two -->
+          <div class="chat three">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Giovanni Capp</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Monday</span>
+            </div>
+          </div>
+          <!-- chat three -->
+          <div class="chat four">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Tobyto</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Monday</span>
+            </div>
+          </div>
+          <!-- chat four -->
+          <div class="chat five">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Chuck Norris</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Sunday</span>
+              <i class="fas fa-volume-mute"></i>
+            </div>
+          </div>
+          <!-- chat five -->
+          <div class="chat six">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Eiichiro Oda</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Saturday</span>
+            </div>
+          </div>
+          <!-- chat six -->
+          <div class="chat seven">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Fibra</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Saturday</span>
+            </div>
+          </div>
+          <!-- chat seven -->
+          <div class="chat eight">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Scarlett Johannson</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Friday</span>
+            </div>
+          </div>
+          <!-- chat eight -->
+          <div class="chat nine">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Hulk</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Friday</span>
+              <i class="fas fa-volume-mute"></i>
+            </div>
+          </div>
+          <!-- chat nine -->
+          <div class="chat ten">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class="chat-text">
+              <h6 class="username">Peter Griffin</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Thursday</span>
+            </div>
+          </div>
+          <!-- chat ten -->
+          <div class="chat eleven">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class=" chat-text">
+              <h6 class="username">Luffy Senpai</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Wednesday</span>
+            </div>
+          </div>
+          <!-- chat eleven -->
+          <div class="chat twelve">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class=" chat-text">
+              <h6 class="username">Zoro</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Tuesday</span>
+              <i class="fas fa-volume-mute"></i>
+            </div>
+          </div>
+          <!-- chat twelve -->
+          <div class="chat thirteen">
+            <div class="chat-img"></div>  <!-- img used as background-image -->
+            <div class=" chat-text">
+              <h6 class="username">Sanji</h6>
+              <span><i class="fas fa-check fa-xs"></i> Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="d-flex when">
+              <span>Tuesday</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT container layout -->
+      <div class="d-flex right-container">
+        <!-- RIGHT header -->
+        <div class="d-flex myHeader">
+          <!-- RIGHT header -->
+          <div class="d-flex header-info">
+            <div class="usr-img"></div>
+            <div class="d-flex usr-name">
+              <span>Aziz Karim</span>
+            </div>
+          </div>
+          <div class="d-flex usr-icon">
+            <i class="fas fa-search fa-"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <!-- RIGHT chat created by JS -->
+         <div class="myChat selected">
+
+         </div>
+
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <div class="myChat"></div>
+        <!-- RIGHT footer -->
+        <div class="d-flex myFooter">
+          <i class="far fa-smile fa-lg"></i>
+          <input id="myTxt" type="text" placeholder="Type a message">
+          <i class="fas fa-microphone fa-lg"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
