@@ -17,3 +17,6 @@ HTML + CSS + + javascript + jQuery + AJAX + Handlebars
 ## Preview
 <img width="1521" alt="Schermata 2019-06-10 alle 19 58 54" src="https://user-images.githubusercontent.com/46935430/59215735-45a30400-8bba-11e9-9af8-d15fa248e939.png">
 
+![boolzap4gif](https://user-images.githubusercontent.com/46935430/59218411-7d14af00-8bc0-11e9-8f5f-fdf0b7a4b939.gif)
+
+
