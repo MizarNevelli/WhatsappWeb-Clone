@@ -2,11 +2,11 @@
 
 Boolzapp has been the second full project after 2 month od coding at Boolean Careers
 
-## Used Technologies
+## Technologies
 
-HTML + CSS + jQuery + AJAX + Handlebars
+HTML + CSS + + javascript + jQuery + AJAX + Handlebars
 
-## jQuery functions
+## functions
 
 - User search
 - Change chat views
@@ -16,4 +16,3 @@ HTML + CSS + jQuery + AJAX + Handlebars
 
 ## Preview
 
-![boolzappscreen1080](https://user-images.githubusercontent.com/46935239/58563039-b34e4800-822a-11e9-901e-6c36b309ddff.gif)
